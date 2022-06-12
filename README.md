@@ -7,7 +7,7 @@
   ##### &nbsp;&nbsp;&nbsp;&nbsp;order checkout-Form with validation
   ##### &nbsp;&nbsp;&nbsp;&nbsp;Connected to firebase -as fake backend
   
-  ![Prview Video:](./nursery-app.mp4)
-  
-  
-  
+  # Preview:
+
+https://user-images.githubusercontent.com/65023862/173235722-cbed7b9e-ddd1-47c9-a3a8-92512a89b582.mp4
+
