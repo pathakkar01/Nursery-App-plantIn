@@ -1,0 +1,74 @@
+[
+  {
+    "id": "p1",
+    "name": "Spider Plant",
+    "img": "plant-1.png",
+    "amount": 0,
+    "rating": "4.2",
+    "price": 200
+  },
+  {
+    "id": "p2",
+    "name": "Snake Plant",
+    "img": "plant-2.png",
+    "amount": 0,
+    "rating": "4.4",
+    "price": 250
+  },
+  {
+    "id": "p3",
+    "name": "Aglaonema siam aurora",
+    "img": "plant-3.png",
+    "amount": 0,
+    "rating": "4.1",
+    "price": 350
+  },
+  {
+    "id": "p4",
+    "name": "Syngonium ( Pink )",
+    "img": "plant-4.png",
+    "amount": 0,
+    "rating": "4.5",
+    "price": 200
+  },
+  {
+    "id": "p5",
+    "name": "Money Plant",
+    "img": "plant-5.png",
+    "amount": 0,
+    "rating": "4.8",
+    "price": 350
+  },
+  {
+    "id": "p6",
+    "name": "Sansevieria , Snake Plant ",
+    "img": "plant-6.png",
+    "amount": 0,
+    "rating": "4.6",
+    "price": 500.34
+  },
+  {
+    "id": "p7",
+    "name": "2 Layer Lucky Bamboo",
+    "img": "plant-7.png",
+    "amount": 0,
+    "rating": "4.0",
+    "price": 600
+  },
+  {
+    "id": "p8",
+    "name": "Portulaca, 9 O Clock (Pink) ",
+    "img": "plant-8.png",
+    "amount": 0,
+    "rating": "4.7",
+    "price": 200
+  },
+  {
+    "id": "p9",
+    "name": "Rose (Red) - Plant",
+    "img": "plant-9.png",
+    "amount": 0,
+    "rating": "4.9",
+    "price": 50
+  }
+]

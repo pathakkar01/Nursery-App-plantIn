@@ -1,0 +1,10 @@
+.plants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 6rem 3rem;
+  margin-right: 0;
+  align-items: stretch;
+}

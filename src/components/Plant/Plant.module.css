@@ -1,0 +1,40 @@
+.plant {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px #8080801c;
+  border: 1px solid rgba(128, 128, 128, 0.16);
+  margin: 1rem;
+  overflow: hidden;
+  max-width: 300px;
+  max-height: 400px;
+  align-items: flex-start;
+  /* max-height: 200px; */
+}
+.plant-img {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+.plant-img img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+}
+.plant-img:hover {
+  transform: scale(1.1);
+}
+
+.plant-name {
+  margin: 0.4rem 0;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  word-wrap: break-word;
+}
+
+.plant-price {
+  color: #ff6a6a;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
