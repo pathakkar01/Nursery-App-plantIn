@@ -1,40 +1,13 @@
 import Header from "./components/Layout/Header";
-import PlantList from "./components/Plant/PlantList";
+
 import Cart from "./components/Cart/Cart";
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
+import AllPlants from "./Pages/AllPlants";
+import Home from "./Pages/Home";
 import CartProvider from "./Store/CartProvider";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 function App() {
-  const [plants, setPlants] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [httpError, setHttpError] = useState();
-
-  const fetchPlantHandler = useCallback(async () => {
-    try {
-      const response = await fetch(
-        "https://react-http-82298-default-rtdb.firebaseio.com/Plant.json"
-      );
-      if (!response.ok) {
-        throw new Error("Something Went Wrong");
-      }
-
-      const data = await response.json();
-      console.log(data);
-      setPlants(data);
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error.message);
-      setIsLoading(false);
-      setHttpError(error);
-    }
-  }, []);
-
-  useEffect(() => {
-    fetchPlantHandler();
-  }, [fetchPlantHandler]);
-
-  console.log(JSON.stringify(plants));
-
   const [cartIsShown, setCartIsShow] = useState(false);
   const showCartHandler = () => {
     setCartIsShow(true);
@@ -42,21 +15,29 @@ function App() {
   const hideCartHandler = () => {
     setCartIsShow(false);
   };
-  const loadingContent = (
-    <>
-      <div className={"wrapper"}>
-        <div id={"loading"}></div>
-      </div>
-    </>
-  );
+
   return (
-    <CartProvider>
-      {cartIsShown && <Cart onHideCart={hideCartHandler} />}
-      <Header onShowCart={showCartHandler} />
-      {httpError && <p className="LoadingState">{httpError.message}...</p>}
-      {isLoading && loadingContent}
-      {!isLoading && <PlantList plants={plants} isLoading={isLoading} />}
-    </CartProvider>
+    <>
+      <CartProvider>
+        {cartIsShown && <Cart onHideCart={hideCartHandler} />}
+        <header>
+          <Header onShowCart={showCartHandler} />
+        </header>
+        <main>
+          <Switch>
+            <Route path="/" exact>
+              <Redirect to="/home" />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/plants">
+              <AllPlants />
+            </Route>
+          </Switch>
+        </main>
+      </CartProvider>
+    </>
   );
 }
 

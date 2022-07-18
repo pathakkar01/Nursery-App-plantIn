@@ -34,6 +34,20 @@ header {
   padding: 12px 15px;
   cursor: pointer;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: rgba(0, 0, 0, 0.9);
+}
+.nav li a {
+  color: #e65f5f;
+  padding: 8px;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+.nav a:active,
+.nav a.active {
+  opacity: 0.8;
+
+  border-bottom: 3px solid#ff8887;
 }
